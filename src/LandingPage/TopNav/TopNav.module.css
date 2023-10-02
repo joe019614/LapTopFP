@@ -1,16 +1,19 @@
+:root{
+    --element-spacing:1.5rem;
+}
 .top-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:1.5rem
+    margin:var(--element-spacing);
 }
 .left>*{
-    margin-right: 1.5rem;
+    margin-right: var(--element-spacing);
 }
 .right{
     display: flex;
     align-items: center;
 }
 .right>*{
-    margin-left: 1.5rem;
+    margin-left:var(--element-spacing);
 }
