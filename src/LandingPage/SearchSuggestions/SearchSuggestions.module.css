@@ -1,0 +1,8 @@
+.suggestions{
+    display:flex;
+}
+.suggestion{
+    font-size:0.75rem;
+    margin-left:30px;
+    margin-right:2.5rem;
+}
