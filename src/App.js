@@ -7,12 +7,12 @@ import {Routes,Route} from "react-router-dom";
 function App() {
   return (
 
-    <switch>
+    <>
         <Routes>
           <Route path="/search" Component={Search}/>
           <Route path="/"       Component={LandingPage}/>
         </Routes>
-    </switch>
+    </>
 
 
   );
