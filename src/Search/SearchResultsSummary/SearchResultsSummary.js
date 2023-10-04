@@ -12,16 +12,22 @@ export default function SearchResultsSummary() {
         </div>
         <div className={styles.filters}>
             <button className="button">
-              <span className="icon"> <i className="fas fa-sliders-h"></i> </span>
+              <span className="icon"> <i className={`fas fa-sliders-h ${styles['imgfilter']}`}></i> </span>
               <span>All Filters</span>
             </button>
+            <div className="buttons has-addons">
+              <button className="button">$</button>
+              <button className="button">$$</button>
+              <button className="button">$$$</button>
+              <button className="button">$$$$</button>
+            </div>
             <button className="button">
-              <span className="icon"> <i className="fab fa-clock"></i> </span>
+              <span className="icon"> <i className={`fas fa-clock ${styles['imgclock']}`}></i> </span>
               <span>Open Now</span>
             </button>
             <button className="button">
-              <span className="icon"> <i className="fab fa-github"></i> </span>
-              <span>GitHub</span>
+              <span className="icon"> <i className={`fas fa-dollar-sign ${styles['imgdollar']}`}></i> </span>
+              <span>Cashback</span>
             </button>
         </div>
     </div>
