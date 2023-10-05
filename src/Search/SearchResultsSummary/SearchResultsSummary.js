@@ -2,17 +2,21 @@ import React from 'react'
 import styles from "./SearchResultsSummary.module.css"
 
 export default function SearchResultsSummary(props) {
+   let resultStats = null;
+    if (props.amountResults && props.shownResults) {
+        resultStats = <p>Showing 1-{props.shownResults} out of {props.amountResults} results</p>
+    }
   return (
-    <div className={styles['container']}>
+    <div className={styles.container}>
         <div className={styles['search-summary']}>
             <h1 className='subtitle'>
                 <strong>{props.term}</strong> {props.location}
             </h1>
-            <p>Showing 1-20 out of 100results</p>
+             {resultStats}
         </div>
         <div className={styles.filters}>
             <button className="button">
-              <span className="icon"> <i className={`fas fa-sliders-h ${styles['imgfilter']}`}></i> </span>
+              <span className="icon"> <i className="fas fa-sliders-h"></i> </span>
               <span>All Filters</span>
             </button>
             <div className="buttons has-addons">
@@ -22,11 +26,11 @@ export default function SearchResultsSummary(props) {
               <button className="button">$$$$</button>
             </div>
             <button className="button">
-              <span className="icon"> <i className={`fas fa-clock ${styles['imgclock']}`}></i> </span>
+              <span className="icon"> <i className="fas fa-clock"></i> </span>
               <span>Open Now</span>
             </button>
             <button className="button">
-              <span className="icon"> <i className={`fas fa-dollar-sign ${styles['imgdollar']}`}></i> </span>
+              <span className="icon"> <i className="fas fa-dollar-sign"></i> </span>
               <span>Cashback</span>
             </button>
         </div>

@@ -1,13 +1,13 @@
 .search-result{
     display: flex;
-    max-width: 1100px;
+    max-width: 1135px;
     width:100%
 }
 .business-image {
     width: 210px;
     height: 210px;
     border-radius: 4px;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
 } 
 
 .business-info{
@@ -15,4 +15,8 @@
 }
 .contact-info p{
     font-size: 0.85rem;
+}
+
+:global(.tag).business-tag {
+    margin-right: 4px;
 }

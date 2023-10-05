@@ -4,23 +4,20 @@ import SubNav from '../NavBar/SubNav/SubNav'
 import SearchResultsSummary from './SearchResultsSummary/SearchResultsSummary'
 import SearchResults from './SearchResults/SearchResults'
 import  {useSearchParams} from 'react-router-dom';
-/* import useReactRouter from 'use-react-router' */
-/* 
+import { useBusinessSearch } from '../hooks/yelp-api/useBusinessSearch'
+
 export default function Search() {
-    const {location}=useReactRouter();
-    const params = new URLSearchParams(location,search);
-    const termParam = params.get('find_desc');
-    const locationParam = params.get('find_loc'); */
-export default function Search() {
-  const [searchParams/* ,setSearchParams */] = useSearchParams();
-  const termParam = searchParams.get('find_desc');
+  const [searchParams] = useSearchParams();
+  const term = searchParams.get('find_desc');
   const locationParam = searchParams.get('find_loc');
+  const [businesses,amountResults,apiSearchParams,setapiSearchParms] = useBusinessSearch(term,locationParam);
+
   return (
     <div>
-        <NavBar term={termParam} location={locationParam}/>
+        <NavBar term={term} location={locationParam}/>
         <SubNav/>  
-        <SearchResultsSummary term={termParam} location={locationParam}/>
-        <SearchResults/>
+        <SearchResultsSummary term={term} location={locationParam}/>
+        <SearchResults businesses={businesses}/>
     </div>
   )
 }

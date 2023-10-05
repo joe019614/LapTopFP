@@ -5,7 +5,7 @@ import styles from './LandingPage.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 import SearchSuggestions from './SearchSuggestions/SearchSuggestions'
 import {useNavigate} from 'react-router-dom'
-/* utube#22 7:25 */
+
 export default function LandingPage() {
    const navigate= useNavigate();
    function search(term,location){

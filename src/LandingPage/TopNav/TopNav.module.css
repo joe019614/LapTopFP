@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     margin:var(--element-spacing);
-    width:100%; /* 左2右2 */
+    width:100%;
 }
 .left>*{
     margin-right: var(--element-spacing);

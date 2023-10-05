@@ -43,7 +43,7 @@ export default function SearchBar(props) {
             
             <button className={`button ${sizeClass} ${styles['search-button']}`} onClick={submit}>
                 <span className={`icon is-small ${styles['search-icon']}`}>
-                <i className="fas fa-search" /* style={{color: "#ffffff",}} */ ></i>
+                <i className="fas fa-search" ></i>
                 </span>
             </button>
             

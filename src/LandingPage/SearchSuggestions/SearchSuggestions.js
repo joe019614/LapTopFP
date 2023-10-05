@@ -7,7 +7,7 @@ export default function SearchSuggestions() {
         <span className="icon is-small">
             <i className="fas fa-utensils" /* style={{color: "#ffffff",}} */ ></i>
         </span>
-        <span className={styles.suggestion}>Restaurantssssss</span>
+        <span className={styles.suggestion}>Restaurants</span>
 
         <span className="icon is-small">
             <i className="fas fa-cocktail" /* style={{color: "#ffffff",}} */ ></i>
